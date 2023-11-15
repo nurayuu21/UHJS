@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Array Negara</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Data Negara</h2>
+        <button onclick="showCountries()">Tampilkan Negara</button>
+        <button onclick="accessIndonesia()">Akses Indonesia</button>
+        <button onclick="addCountry()">Tambah Negara</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        // Array negara
+var countries = ['Indonesia', 'Malaysia', 'Thailand', 'Singapore', 'Vietnam', 'Philippines', 'Myanmar', 'Cambodia', 'Laos', 'Brunei'];
+
+function showCountries() {
+    // Menampilkan seluruh data negara
+    document.getElementById('output').innerText = 'Negara: ' + countries.join(', ');
+}
+
+function accessIndonesia() {
+    // Mengakses nilai 'Indonesia' dan menampilkan indeksnya
+    var indonesiaIndex = countries.indexOf('Indonesia');
+    document.getElementById('output').innerText = 'Indonesia ada pada indeks ke-' + indonesiaIndex;
+}
+
+function addCountry() {
+    // Menambahkan satu data negara menggunakan metode push
+    var newCountry = 'Timor Leste';
+    countries.push(newCountry);
+    document.getElementById('output').innerText = newCountry + ' telah ditambahkan. Negara: ' + countries.join(', ');
+}
+
+    </script>
+</body>
+</html>

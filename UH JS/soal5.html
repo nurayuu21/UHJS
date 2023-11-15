@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mengubah Kalimat</title>
+</head>
+<body>
+    <div id="app">
+        <p id="sentence" onclick="changeSentence()">Saya merasa belum bisa belajar JavaScript</p>
+    </div>
+
+    <script>
+        function changeSentence() {
+    var sentenceElement = document.getElementById('sentence');
+    
+    // Merubah kalimat
+    sentenceElement.innerText = 'Ternyata saya masih kurang berlatih belajar JavaScript';
+
+    // Menggubah warna latar belakang menjadi hijau
+    sentenceElement.classList.add('green-background');
+}
+    </script>
+</body>
+</html>

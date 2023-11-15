@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cek Kepribadian</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Cek Kepribadian Berdasarkan Golongan Darah</h2>
+        <label for="bloodType">Apa golongan darah kamu? (A, B, AB, O)</label>
+        <input type="text" id="bloodType" placeholder="Masukkan golongan darah">
+
+        <button onclick="checkPersonality()">Cek Kepribadian</button>
+
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function checkPersonality() {
+    // Mendapatkan nilai golongan darah dari input
+    var bloodType = document.getElementById('bloodType').value.toUpperCase();
+
+    // Menentukan kepribadian berdasarkan golongan darah
+    var personality = '';
+    switch (bloodType) {
+        case 'A':
+            personality = 'Identik dengan sifatnya yang terorganisir, kritis, tenang dalam menghadapi masalah.';
+            break;
+        case 'B':
+            personality = 'Semangat yang tinggi, aktif, kreatif, dan selalu ingin tahu.';
+            break;
+        case 'AB':
+            personality = 'Kombinasi sifat dari golongan A dan B, fleksibel, sosial, dan mudah bergaul.';
+            break;
+        case 'O':
+            personality = 'Penuh semangat, suka tantangan, dan mudah beradaptasi.';
+            break;
+        default:
+            personality = 'Golongan darah tidak valid. Masukkan A, B, AB, atau O.';
+    }
+
+    // Menampilkan hasil kepribadian
+    document.getElementById('output').innerText = 'Kepribadian berdasarkan golongan darah ' + bloodType + ': ' + personality;
+}
+
+    </script>
+</body>
+</html>
